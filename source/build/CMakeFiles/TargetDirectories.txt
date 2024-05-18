@@ -1,0 +1,5 @@
+/source/build/CMakeFiles/tdlib.dir
+/source/build/CMakeFiles/tdlib-build.dir
+/source/build/CMakeFiles/main.dir
+/source/build/CMakeFiles/edit_cache.dir
+/source/build/CMakeFiles/rebuild_cache.dir

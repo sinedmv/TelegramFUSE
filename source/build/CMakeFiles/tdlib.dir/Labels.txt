@@ -1,0 +1,13 @@
+# Target labels
+ tdlib
+# Source files and their labels
+/source/build/CMakeFiles/tdlib
+/source/build/CMakeFiles/tdlib.rule
+/source/build/CMakeFiles/tdlib-complete.rule
+/source/build/tdlib-prefix/src/tdlib-stamp/tdlib-build.rule
+/source/build/tdlib-prefix/src/tdlib-stamp/tdlib-configure.rule
+/source/build/tdlib-prefix/src/tdlib-stamp/tdlib-download.rule
+/source/build/tdlib-prefix/src/tdlib-stamp/tdlib-install.rule
+/source/build/tdlib-prefix/src/tdlib-stamp/tdlib-mkdir.rule
+/source/build/tdlib-prefix/src/tdlib-stamp/tdlib-patch.rule
+/source/build/tdlib-prefix/src/tdlib-stamp/tdlib-update.rule

@@ -1,0 +1,1587 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      The system is: Linux - 5.15.146.1-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_db7c1/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_db7c1.dir/build.make CMakeFiles/cmTC_db7c1.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT'
+        Building CXX object CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_db7c1.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_db7c1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccpSvb5k.s
+        GNU C++17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/13
+         /usr/include/x86_64-linux-gnu/c++/13
+         /usr/include/c++/13/backward
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 4e0f319cd9945d8f5a9eeeeec1481ba5
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_db7c1.dir/'
+         as -v --64 -o CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpSvb5k.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_db7c1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db7c1.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_db7c1 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_db7c1' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_db7c1.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvEkrfY.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_db7c1 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_db7c1' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_db7c1.'
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/13]
+          add: [/usr/include/x86_64-linux-gnu/c++/13]
+          add: [/usr/include/c++/13/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/13] ==> [/usr/include/x86_64-linux-gnu/c++/13]
+        collapse include dir [/usr/include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_db7c1/fast]
+        ignore line: [gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT']
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_db7c1.dir/build.make CMakeFiles/cmTC_db7c1.dir/build]
+        ignore line: [gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0szQOT']
+        ignore line: [Building CXX object CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_db7c1.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_db7c1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccpSvb5k.s]
+        ignore line: [GNU C++17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/13]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/include/c++/13/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 4e0f319cd9945d8f5a9eeeeec1481ba5]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_db7c1.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpSvb5k.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_db7c1]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db7c1.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_db7c1 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_db7c1' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_db7c1.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvEkrfY.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_db7c1 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccvEkrfY.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_db7c1] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_db7c1.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f18e6/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f18e6.dir/build.make CMakeFiles/cmTC_f18e6.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW'
+        Building C object CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f18e6.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f18e6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccgDIplD.s
+        GNU C17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 35e51c4ef55ea8f6b448d85f0fac5984
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f18e6.dir/'
+         as -v --64 -o CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o /tmp/ccgDIplD.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_f18e6
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f18e6.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o -o cmTC_f18e6 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f18e6' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f18e6.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccX9P47a.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f18e6 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f18e6' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f18e6.'
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f18e6/fast]
+        ignore line: [gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW']
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f18e6.dir/build.make CMakeFiles/cmTC_f18e6.dir/build]
+        ignore line: [gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-AzZiAW']
+        ignore line: [Building C object CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f18e6.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f18e6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccgDIplD.s]
+        ignore line: [GNU C17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 35e51c4ef55ea8f6b448d85f0fac5984]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f18e6.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o /tmp/ccgDIplD.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_f18e6]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f18e6.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o -o cmTC_f18e6 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f18e6' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f18e6.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccX9P47a.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f18e6 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccX9P47a.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_f18e6] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_f18e6.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:126 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cab56/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_cab56.dir/build.make CMakeFiles/cmTC_cab56.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi'
+        Building C object CMakeFiles/cmTC_cab56.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_cab56.dir/src.c.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi/src.c
+        Linking C executable cmTC_cab56
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cab56.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_cab56.dir/src.c.o -o cmTC_cab56 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-nV3WQi'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_STD14"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_STD14"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c059c/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c059c.dir/build.make CMakeFiles/cmTC_c059c.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH'
+        Building CXX object CMakeFiles/cmTC_c059c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_STD14  -std=c++14 -o CMakeFiles/cmTC_c059c.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH/src.cxx
+        Linking CXX executable cmTC_c059c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c059c.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_c059c.dir/src.cxx.o -o cmTC_c059c 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-V1nRBH'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:101 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WALL"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WALL"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c5cb5/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c5cb5.dir/build.make CMakeFiles/cmTC_c5cb5.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq'
+        Building CXX object CMakeFiles/cmTC_c5cb5.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WALL  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall   -Wall -o CMakeFiles/cmTC_c5cb5.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq/src.cxx
+        Linking CXX executable cmTC_c5cb5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5cb5.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall CMakeFiles/cmTC_c5cb5.dir/src.cxx.o -o cmTC_c5cb5 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gzxDyq'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:102 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WEXTRA"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WEXTRA"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9b1e5/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9b1e5.dir/build.make CMakeFiles/cmTC_9b1e5.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p'
+        Building CXX object CMakeFiles/cmTC_9b1e5.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WEXTRA  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra   -Wextra -o CMakeFiles/cmTC_9b1e5.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p/src.cxx
+        Linking CXX executable cmTC_9b1e5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b1e5.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra CMakeFiles/cmTC_9b1e5.dir/src.cxx.o -o cmTC_9b1e5 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-GmKq7p'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:103 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_53d90/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_53d90.dir/build.make CMakeFiles/cmTC_53d90.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q'
+        Building CXX object CMakeFiles/cmTC_53d90.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2   -Wimplicit-fallthrough=2 -o CMakeFiles/cmTC_53d90.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q/src.cxx
+        Linking CXX executable cmTC_53d90
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53d90.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 CMakeFiles/cmTC_53d90.dir/src.cxx.o -o cmTC_53d90 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-tItj5q'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:104 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WPOINTER_ARITH"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WPOINTER_ARITH"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d9781/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d9781.dir/build.make CMakeFiles/cmTC_d9781.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n'
+        Building CXX object CMakeFiles/cmTC_d9781.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WPOINTER_ARITH  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith   -Wpointer-arith -o CMakeFiles/cmTC_d9781.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n/src.cxx
+        Linking CXX executable cmTC_d9781
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9781.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith CMakeFiles/cmTC_d9781.dir/src.cxx.o -o cmTC_d9781 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-u5SK7n'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:105 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WCAST_QUAL"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WCAST_QUAL"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e5729/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e5729.dir/build.make CMakeFiles/cmTC_e5729.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU'
+        Building CXX object CMakeFiles/cmTC_e5729.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCAST_QUAL  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual   -Wcast-qual -o CMakeFiles/cmTC_e5729.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU/src.cxx
+        Linking CXX executable cmTC_e5729
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5729.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual CMakeFiles/cmTC_e5729.dir/src.cxx.o -o cmTC_e5729 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-B3VmDU'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:106 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSIGN_COMPARE"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSIGN_COMPARE"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b90eb/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b90eb.dir/build.make CMakeFiles/cmTC_b90eb.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw'
+        Building CXX object CMakeFiles/cmTC_b90eb.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSIGN_COMPARE  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare   -Wsign-compare -o CMakeFiles/cmTC_b90eb.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw/src.cxx
+        Linking CXX executable cmTC_b90eb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b90eb.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare CMakeFiles/cmTC_b90eb.dir/src.cxx.o -o cmTC_b90eb 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-zaxoYw'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:107 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WDUPLICATED_BRANCHES"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WDUPLICATED_BRANCHES"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8a74a/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8a74a.dir/build.make CMakeFiles/cmTC_8a74a.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof'
+        Building CXX object CMakeFiles/cmTC_8a74a.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WDUPLICATED_BRANCHES  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches   -Wduplicated-branches -o CMakeFiles/cmTC_8a74a.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof/src.cxx
+        Linking CXX executable cmTC_8a74a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a74a.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches CMakeFiles/cmTC_8a74a.dir/src.cxx.o -o cmTC_8a74a 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Ca9Zof'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:108 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WDUPLICATED_COND"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WDUPLICATED_COND"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5a30d/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5a30d.dir/build.make CMakeFiles/cmTC_5a30d.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT'
+        Building CXX object CMakeFiles/cmTC_5a30d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WDUPLICATED_COND  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond   -Wduplicated-cond -o CMakeFiles/cmTC_5a30d.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT/src.cxx
+        Linking CXX executable cmTC_5a30d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a30d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond CMakeFiles/cmTC_5a30d.dir/src.cxx.o -o cmTC_5a30d 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-47F1MT'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:109 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WALLOC_ZERO"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WALLOC_ZERO"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_74130/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_74130.dir/build.make CMakeFiles/cmTC_74130.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC'
+        Building CXX object CMakeFiles/cmTC_74130.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WALLOC_ZERO  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero   -Walloc-zero -o CMakeFiles/cmTC_74130.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC/src.cxx
+        Linking CXX executable cmTC_74130
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74130.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero CMakeFiles/cmTC_74130.dir/src.cxx.o -o cmTC_74130 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-m3bUtC'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:110 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WLOGICAL_OP"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WLOGICAL_OP"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3beb0/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3beb0.dir/build.make CMakeFiles/cmTC_3beb0.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ'
+        Building CXX object CMakeFiles/cmTC_3beb0.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WLOGICAL_OP  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op   -Wlogical-op -o CMakeFiles/cmTC_3beb0.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ/src.cxx
+        Linking CXX executable cmTC_3beb0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3beb0.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op CMakeFiles/cmTC_3beb0.dir/src.cxx.o -o cmTC_3beb0 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-JgsmZJ'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:111 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WTAUTOLOGICAL_COMPARE"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WTAUTOLOGICAL_COMPARE"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5983f/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5983f.dir/build.make CMakeFiles/cmTC_5983f.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP'
+        Building CXX object CMakeFiles/cmTC_5983f.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WTAUTOLOGICAL_COMPARE  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare   -Wtautological-compare -o CMakeFiles/cmTC_5983f.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP/src.cxx
+        Linking CXX executable cmTC_5983f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5983f.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare CMakeFiles/cmTC_5983f.dir/src.cxx.o -o cmTC_5983f 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-lroQJP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:113 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WVLA"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WVLA"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_960e4/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_960e4.dir/build.make CMakeFiles/cmTC_960e4.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl'
+        Building CXX object CMakeFiles/cmTC_960e4.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WVLA  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla   -Wvla -o CMakeFiles/cmTC_960e4.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl/src.cxx
+        Linking CXX executable cmTC_960e4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_960e4.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla CMakeFiles/cmTC_960e4.dir/src.cxx.o -o cmTC_960e4 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-gialVl'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:114 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WNON_VIRTUAL_DTOR"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WNON_VIRTUAL_DTOR"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a0dde/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a0dde.dir/build.make CMakeFiles/cmTC_a0dde.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh'
+        Building CXX object CMakeFiles/cmTC_a0dde.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WNON_VIRTUAL_DTOR  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor   -Wnon-virtual-dtor -o CMakeFiles/cmTC_a0dde.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh/src.cxx
+        Linking CXX executable cmTC_a0dde
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0dde.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor CMakeFiles/cmTC_a0dde.dir/src.cxx.o -o cmTC_a0dde 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-3BYMxh'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:115 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WUNUSED_PARAMETER"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WUNUSED_PARAMETER"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_255d0/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_255d0.dir/build.make CMakeFiles/cmTC_255d0.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5'
+        Building CXX object CMakeFiles/cmTC_255d0.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WUNUSED_PARAMETER  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter   -Wunused-parameter -o CMakeFiles/cmTC_255d0.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5/src.cxx
+        Linking CXX executable cmTC_255d0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_255d0.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter CMakeFiles/cmTC_255d0.dir/src.cxx.o -o cmTC_255d0 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-NC3qM5'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:116 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WCONVERSION"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WCONVERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_93e4c/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_93e4c.dir/build.make CMakeFiles/cmTC_93e4c.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP'
+        Building CXX object CMakeFiles/cmTC_93e4c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCONVERSION  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion   -Wconversion -o CMakeFiles/cmTC_93e4c.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP/src.cxx
+        Linking CXX executable cmTC_93e4c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93e4c.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion CMakeFiles/cmTC_93e4c.dir/src.cxx.o -o cmTC_93e4c 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-Zx1XcP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:117 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSIGN_CONVERSION"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSIGN_CONVERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_31f9d/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_31f9d.dir/build.make CMakeFiles/cmTC_31f9d.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl'
+        Building CXX object CMakeFiles/cmTC_31f9d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSIGN_CONVERSION  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion   -Wsign-conversion -o CMakeFiles/cmTC_31f9d.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl/src.cxx
+        Linking CXX executable cmTC_31f9d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31f9d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion CMakeFiles/cmTC_31f9d.dir/src.cxx.o -o cmTC_31f9d 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-mH7zMl'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:118 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WCXX14_COMPAT_PEDANTIC"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WCXX14_COMPAT_PEDANTIC"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_44cd9/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_44cd9.dir/build.make CMakeFiles/cmTC_44cd9.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD'
+        Building CXX object CMakeFiles/cmTC_44cd9.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCXX14_COMPAT_PEDANTIC  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wc++14-compat-pedantic   -Wc++14-compat-pedantic -o CMakeFiles/cmTC_44cd9.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD/src.cxx
+        c++: error: unrecognized command-line option '-Wc++14-compat-pedantic'
+        c++: error: unrecognized command-line option '-Wc++14-compat-pedantic'
+        gmake[4]: *** [CMakeFiles/cmTC_44cd9.dir/build.make:78: CMakeFiles/cmTC_44cd9.dir/src.cxx.o] Error 1
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD'
+        gmake[3]: *** [Makefile:127: cmTC_44cd9/fast] Error 2
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-iCnYrD'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:119 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WDEPRECATED"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WDEPRECATED"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a50ba/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a50ba.dir/build.make CMakeFiles/cmTC_a50ba.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ'
+        Building CXX object CMakeFiles/cmTC_a50ba.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WDEPRECATED  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated   -Wdeprecated -o CMakeFiles/cmTC_a50ba.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ/src.cxx
+        Linking CXX executable cmTC_a50ba
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a50ba.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated CMakeFiles/cmTC_a50ba.dir/src.cxx.o -o cmTC_a50ba 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-oYYitJ'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:120 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WUNUSED_COMMAND_LINE_ARGUMENT"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WUNUSED_COMMAND_LINE_ARGUMENT"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_44b74/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_44b74.dir/build.make CMakeFiles/cmTC_44b74.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94'
+        Building CXX object CMakeFiles/cmTC_44b74.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WUNUSED_COMMAND_LINE_ARGUMENT  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wno-unused-command-line-argument   -Wunused-command-line-argument -o CMakeFiles/cmTC_44b74.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94/src.cxx
+        c++: error: unrecognized command-line option '-Wunused-command-line-argument'; did you mean '-Wunused-dummy-argument'?
+        gmake[4]: *** [CMakeFiles/cmTC_44b74.dir/build.make:78: CMakeFiles/cmTC_44b74.dir/src.cxx.o] Error 1
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94'
+        gmake[3]: *** [Makefile:127: cmTC_44b74/fast] Error 2
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-ewDt94'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:121 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_QUNUSED_ARGUMENTS"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_QUNUSED_ARGUMENTS"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b47e6/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b47e6.dir/build.make CMakeFiles/cmTC_b47e6.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc'
+        Building CXX object CMakeFiles/cmTC_b47e6.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_QUNUSED_ARGUMENTS  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Qunused-arguments   -Qunused-arguments -o CMakeFiles/cmTC_b47e6.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc/src.cxx
+        c++: error: unrecognized command-line option '-Qunused-arguments'
+        c++: error: unrecognized command-line option '-Qunused-arguments'
+        gmake[4]: *** [CMakeFiles/cmTC_b47e6.dir/build.make:78: CMakeFiles/cmTC_b47e6.dir/src.cxx.o] Error 1
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc'
+        gmake[3]: *** [Makefile:127: cmTC_b47e6/fast] Error 2
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-X63LOc'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:122 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WODR"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WODR"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_11980/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_11980.dir/build.make CMakeFiles/cmTC_11980.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL'
+        Building CXX object CMakeFiles/cmTC_11980.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WODR  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr   -Wodr -o CMakeFiles/cmTC_11980.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL/src.cxx
+        Linking CXX executable cmTC_11980
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11980.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr CMakeFiles/cmTC_11980.dir/src.cxx.o -o cmTC_11980 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-wCJBZL'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:123 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_89f2d/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_89f2d.dir/build.make CMakeFiles/cmTC_89f2d.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51'
+        Building CXX object CMakeFiles/cmTC_89f2d.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging   -flto-odr-type-merging -o CMakeFiles/cmTC_89f2d.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51/src.cxx
+        Linking CXX executable cmTC_89f2d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89f2d.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging CMakeFiles/cmTC_89f2d.dir/src.cxx.o -o cmTC_89f2d 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-H70k51'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:137 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WMAYBE_UNINITIALIZED"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WMAYBE_UNINITIALIZED"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1e2cb/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1e2cb.dir/build.make CMakeFiles/cmTC_1e2cb.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05'
+        Building CXX object CMakeFiles/cmTC_1e2cb.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WMAYBE_UNINITIALIZED  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized   -Wmaybe-uninitialized -o CMakeFiles/cmTC_1e2cb.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05/src.cxx
+        Linking CXX executable cmTC_1e2cb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e2cb.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized CMakeFiles/cmTC_1e2cb.dir/src.cxx.o -o cmTC_1e2cb 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-IiTQ05'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMake/AddCXXCompilerFlag.cmake:39 (check_cxx_compiler_flag)"
+      - "CMake/TdSetUpCompiler.cmake:146 (add_cxx_compiler_flag)"
+      - "CMakeLists.txt:133 (td_set_up_compiler)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WREDUNDANT_MOVE"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WREDUNDANT_MOVE"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_89443/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_89443.dir/build.make CMakeFiles/cmTC_89443.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY'
+        Building CXX object CMakeFiles/cmTC_89443.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WREDUNDANT_MOVE  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move   -Wredundant-move -o CMakeFiles/cmTC_89443.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY/src.cxx
+        Linking CXX executable cmTC_89443
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89443.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move CMakeFiles/cmTC_89443.dir/src.cxx.o -o cmTC_89443 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-0hMftY'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCompilerFlag.cmake:52 (cmake_check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:238 (check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:419 (_test_compiler_hidden_visibility)"
+      - "CMakeLists.txt:837 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_HIDDEN_VISIBILITY"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_HIDDEN_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_147a3/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_147a3.dir/build.make CMakeFiles/cmTC_147a3.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe'
+        Building CXX object CMakeFiles/cmTC_147a3.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move  -fPIE   -fvisibility=hidden -o CMakeFiles/cmTC_147a3.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe/src.cxx
+        Linking CXX executable cmTC_147a3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_147a3.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move  CMakeFiles/cmTC_147a3.dir/src.cxx.o -o cmTC_147a3 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-1vVYIe'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCompilerFlag.cmake:52 (cmake_check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:239 (check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:419 (_test_compiler_hidden_visibility)"
+      - "CMakeLists.txt:837 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2bf16/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2bf16.dir/build.make CMakeFiles/cmTC_2bf16.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U'
+        Building CXX object CMakeFiles/cmTC_2bf16.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move  -fPIE   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_2bf16.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U/src.cxx
+        Linking CXX executable cmTC_2bf16
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bf16.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move  CMakeFiles/cmTC_2bf16.dir/src.cxx.o -o cmTC_2bf16 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-QlYP0U'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSourceCompiles.cmake:77 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:206 (check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:263 (_check_cxx_compiler_attribute)"
+      - "/usr/share/cmake-3.28/Modules/GenerateExportHeader.cmake:420 (_test_compiler_has_deprecated)"
+      - "CMakeLists.txt:837 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
+    directories:
+      source: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi"
+      binary: "/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move"
+      CMAKE_MODULE_PATH: "/source/build/tdlib-prefix/src/tdlib/CMake;"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_DEPRECATED_ATTR"
+      cached: true
+      stdout: |
+        Change Dir: '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bc0ff/fast
+        gmake[3]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bc0ff.dir/build.make CMakeFiles/cmTC_bc0ff.dir/build
+        gmake[4]: Entering directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi'
+        Building CXX object CMakeFiles/cmTC_bc0ff.dir/src.cxx.o
+        /usr/bin/c++ -DCOMPILER_HAS_DEPRECATED_ATTR  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move  -fPIE -o CMakeFiles/cmTC_bc0ff.dir/src.cxx.o -c /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi/src.cxx
+        /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi/src.cxx: In function 'int main()':
+        /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi/src.cxx:2:33: warning: 'int somefunc()' is deprecated [-Wdeprecated-declarations]
+            2 |     int main() { return somefunc();}
+              |                         ~~~~~~~~^~
+        /source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi/src.cxx:1:37: note: declared here
+            1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
+              |                                     ^~~~~~~~
+        Linking CXX executable cmTC_bc0ff
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc0ff.dir/link.txt --verbose=1
+        /usr/bin/c++  -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit-fallthrough=2 -Wpointer-arith -Wcast-qual -Wsign-compare -Wduplicated-branches -Wduplicated-cond -Walloc-zero -Wlogical-op -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wdeprecated -Wodr -flto-odr-type-merging -Wno-maybe-uninitialized -Wno-redundant-move  CMakeFiles/cmTC_bc0ff.dir/src.cxx.o -o cmTC_bc0ff 
+        gmake[4]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi'
+        gmake[3]: Leaving directory '/source/build/tdlib-prefix/src/tdlib-build/CMakeFiles/CMakeScratch/TryCompile-77qwQi'
+        
+      exitCode: 0
+...

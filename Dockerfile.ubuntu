@@ -1,0 +1,28 @@
+FROM ubuntu
+
+COPY /source /source
+
+RUN apt-get update && apt-get -y --no-install-recommends install \
+    build-essential \
+    clang \
+    cmake \
+    gdb \
+    wget \
+    curl \
+    openssh-server
+
+# Host name (or IP address): localhost
+# Port: 2222 
+# User name: root
+# Password: root
+
+RUN mkdir -p /var/run/sshd && \
+    echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config && \
+    ssh-keygen -A && \
+    echo 'root:root' | chpasswd
+
+# Открытие порта 22 для SSH
+EXPOSE 22
+
+# Команда для запуска SSH-сервера и поддержания контейнера активным
+CMD ["/usr/sbin/sshd", "-D"]

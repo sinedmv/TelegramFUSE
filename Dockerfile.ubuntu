@@ -16,15 +16,6 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     gperf \
     zlib1g-dev \
     libssl-dev
-    
-RUN cd source && \
-    git clone https://github.com/tdlib/td.git && \
-    cd td && \
-    mkdir build && \
-    cd build && \
-    cmake -DCMAKE_BUILD_TYPE=Release .. && \
-    cmake --build .
-
 
 # Host name (or IP address): localhost
 # Port: 2222 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fuse.h>
-#include <td/telegram/td_json_client.h>
+#include <tgbot/tgbot.h>
 
 int main(int argc, char *argv[]) {
-    std::cout << "Hello, world";
+    std::cout << "Hello, world" << std::endl;
 }

@@ -17,6 +17,9 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     zlib1g-dev \
     libssl-dev
 
+# Для tgbot    
+RUN apt-get -y install g++ make binutils cmake libboost-system-dev libssl-dev zlib1g-dev libcurl4-openssl-dev
+    
 # Host name (or IP address): localhost
 # Port: 2222 
 # User name: root

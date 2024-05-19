@@ -11,7 +11,7 @@ include(ExternalProject)
 ExternalProject_Add(
     tgbot
     GIT_REPOSITORY https://github.com/reo7sp/tgbot-cpp.git
-    GIT_TAG master  # Укажите необходимую ветку или тег
+    GIT_TAG master 
     CMAKE_ARGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/tgbot
     STEP_TARGETS build
     BUILD_BYPRODUCTS ${CMAKE_BINARY_DIR}/tgbot/lib/libTgBot.a
@@ -27,7 +27,7 @@ if (CURL_FOUND)
     add_definitions(-DHAVE_CURL)
 endif()
 
-add_executable(main main.cpp)
+add_executable(main main.cpp filesystemmeta.h filesystemmeta.cpp)
 
 add_dependencies(main tgbot)
 

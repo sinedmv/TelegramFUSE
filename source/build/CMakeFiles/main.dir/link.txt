@@ -1,1 +1,0 @@
-/usr/bin/c++ -D_FILE_OFFSET_BITS=64 CMakeFiles/main.dir/main.cpp.o -o main   -L/source/build/tdlib/lib  -Wl,-rpath,/source/build/tdlib/lib -ltdjson 

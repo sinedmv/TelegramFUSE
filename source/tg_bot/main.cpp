@@ -18,6 +18,10 @@ int main() {
     Bot bot(token);
     auto fsMeta = new FileSystemMeta(bot);
 
+    bot.getEvents().onCommand("getTestFile", [&bot, fsMeta](Message::Ptr message) {
+        fsMeta->SendTestFile();
+    });
+
     bot.getEvents().onAnyMessage([&bot, fsMeta](Message::Ptr message) {  // Захватываем fsMeta
         printf("User wrote %s\n", message->text.c_str());
         fsMeta->ReceiveMessage(message);
@@ -35,7 +39,6 @@ int main() {
         TgLongPoll longPoll(bot);
         while (true) {
             printf("Long poll started\n");
-            fsMeta->ConsistencyCheck();
             longPoll.start();
         }
     } catch (exception& e) {

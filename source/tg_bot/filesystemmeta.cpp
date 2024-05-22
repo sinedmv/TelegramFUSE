@@ -8,9 +8,8 @@
 using namespace std;
 using namespace TgBot;
 
-const std::string messagesBackupFile = "/source/fs/messagesBackup.txt";
-const std::string fuseDirectory = "/source/fs/";
-const std::string directoriesFile = "/source/fs/directories.txt";
+const std::string messagesBackupFile = "/source/metaFile.txt";
+const std::string directoriesFile = "/source/directories.txt";
 
 std::string GetMimeTypeFromExtension(const std::string& filePath) {
     size_t lastDot = filePath.find_last_of(".");
@@ -43,7 +42,7 @@ FileSystemMeta::FileSystemMeta(Bot& bot) : bot(bot) {
 std::string GetDirectory(const std::string& text) {
     std::regex pattern("#.*");
     if (text.length() != 0 && std::regex_match(text, pattern)) {
-        return text.substr(1);
+        return "/" + text.substr(1);
     }
     return "";
 }
@@ -82,16 +81,16 @@ bool CheckDirectoryExist(const std::string& directory) {
 }
 
 std::string FileSystemMeta::GetAbsolutePath(Message::Ptr& message) {
-    std::string absoluteFilePath = fuseDirectory;
+    std::string absolutePath = "";
     std::regex pattern("#.*");
     std::string directory = GetDirectory(message->caption);
     if (directory.length() != 0) {
-        absoluteFilePath += directory;
-        absoluteFilePath += "/";
+        absolutePath += directory;
+        absolutePath += "/";
     }
-    absoluteFilePath += message->document->fileName;
+    absolutePath += message->document->fileName;
 
-    return absoluteFilePath;
+    return absolutePath;
 }
 
 void FileSystemMeta::GetAllMetaDataAboutFiles() {
@@ -113,15 +112,6 @@ void FileSystemMeta::GetAllMetaDataAboutFiles() {
     }
 
     filesMetaData = resultVector;
-}
-
-bool CheckFileName(string& absolutePath) {
-    if (absolutePath == messagesBackupFile ||
-        absolutePath == directoriesFile ||
-        absolutePath.empty()) {
-            return false;
-    }
-    return true;
 }
 
 void DeleteMatches(string& absolutePath, Bot& bot, std::int64_t chatId) {
@@ -166,11 +156,7 @@ void FileSystemMeta::ReceiveMessage(Message::Ptr& message) {
     if (message->document != nullptr) {
         File::Ptr file = bot.getApi().getFile(message->document->fileId);
 
-        string absoluteFilePath = GetAbsolutePath(message);
-        if (!CheckFileName(absoluteFilePath)) {
-            bot.getApi().sendMessage(message->chat->id, "Файл с таким именем в этой директории не может быть создан");
-            return;
-        }       
+        string absoluteFilePath = GetAbsolutePath(message);   
 
         if (CheckDirectoryExist(GetDirectory(message->caption))) {
             SaveFile(message->messageId, file->fileId, absoluteFilePath, message->date, bot, message->chat->id);

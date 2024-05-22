@@ -10,12 +10,14 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     wget \
     curl \
     openssh-server \
-    libfuse-dev \
+    libfuse3-dev \
     git \
     ca-certificates \
     gperf \
     zlib1g-dev \
-    libssl-dev
+    libssl-dev \
+    pkg-config \
+    fuse
 
 # Для tgbot    
 RUN apt-get -y install g++ make binutils cmake libboost-system-dev libssl-dev zlib1g-dev libcurl4-openssl-dev

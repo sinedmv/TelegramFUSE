@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.ubuntu
+    privileged: true
     container_name: osTelegram
     volumes:
       - ./source:/source

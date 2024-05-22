@@ -2,6 +2,7 @@
 
 #include <cstdlib>
 #include <filesystem>
+#include <set>
 
 const std::string metaFile = "/source/metaFile.txt";
 
@@ -19,10 +20,10 @@ std::vector<std::string> ExtractFirstDirectories(const std::vector<MessageWithFi
     std::set<std::string> firstDirectoriesSet;
 
     for (const auto& meta : filesMeta) {
-        std::size_t startPos = meta->path.find_first_not_of('/');
-        std::size_t endPos = meta->path.find('/', startPos);
+        std::size_t startPos = meta.path.find_first_not_of('/');
+        std::size_t endPos = meta.path.find('/', startPos);
         if (startPos != std::string::npos && endPos != std::string::npos) {
-            firstDirectoriesSet.insert(path.substr(startPos, endPos - startPos));
+            firstDirectoriesSet.insert(meta.path.substr(startPos, endPos - startPos));
         }
     }
 
@@ -72,8 +73,8 @@ std::string LocalFileSystemWithTgAPI::GetFileDataByAbsolutePath(std::string path
     if (fileMeta == nullptr) {
         return "";
     }
-    File::Ptr file = bot.getApi().getFile(fileMeta->fileId);
-    return bot.getApi().downloadFile(file->filePath);
+    File::Ptr file = bot->getApi().getFile(fileMeta->fileId);
+    return bot->getApi().downloadFile(file->filePath);
 }
 
 void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
@@ -82,12 +83,12 @@ void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
     std::string content;
     bool pathExists = false;
     while (std::getline(inputFile, line)) {
-        if (line.find(absolutePath) != std::string::npos) {
+        if (line.find(path) != std::string::npos) {
             pathExists = true;
             std::istringstream iss(line);
             std::int32_t messageId_;
             iss >> messageId_;
-            bot.getApi().deleteMessage(chatId, messageId_);
+            bot->getApi().deleteMessage(chatId, messageId_);
         } else {
             content += line + "\n";
         }
@@ -96,7 +97,7 @@ void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
     inputFile.close();
 
     if (pathExists) {
-        std::ofstream file(messagesBackupFile, std::ios::trunc);
+        std::ofstream file(metaFile, std::ios::trunc);
         file << content;
         file.close();
     }
@@ -110,16 +111,15 @@ std::string getFileName(const std::string& filePath) {
     return filePath;
 }
 
-MessageWithFileData LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
+void LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
     std::string fileName = getFileName(path);
-    std::ofstream outFile(filePath);
+    std::ofstream outFile(fileName);
     outFile << content;
     outFile.close();
 
     DeleteFileByAbsolutePath(path);
-    auto message = bot.getApi().sendDocument(chatId, InputFile::fromFile("/source/fuse/build/" + fileName, GetMimeTypeFromExtension(fileName)));
-    std::filesystem::remove(filename);
-    return message;
+    auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile("/source/fuse/build/" + fileName, GetMimeTypeFromExtension(fileName)));
+    std::filesystem::remove(fileName);
 }
 
 std::string LocalFileSystemWithTgAPI::GetMimeTypeFromExtension(const std::string& filePath) {

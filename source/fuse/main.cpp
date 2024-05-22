@@ -29,6 +29,7 @@ static int my_getattr(const char *path, struct stat *stbuf, struct fuse_file_inf
     } else if (fileMeta != nullptr) {
         stbuf->st_mode = S_IFREG | 0444;
         stbuf->st_nlink = 1;
+        //stbuf->st_size = 5;
         stbuf->st_size = tg.GetFileDataByAbsolutePath(path_str).size();
         stbuf->st_mtime = (time_t)fileMeta->date;
         stbuf->st_ctime = (time_t)fileMeta->date;
@@ -58,9 +59,9 @@ static int my_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t
     filler(buf, "..", NULL, 0, static_cast<fuse_fill_dir_flags>(0));
 
     if (path_str == "/") {
-        for (const auto& tag : tags) {
-            filler(buf, tag.c_str() + 1, NULL, 0, static_cast<fuse_fill_dir_flags>(0));
-        }
+        // for (const auto& tag : tags) {
+        //     filler(buf, tag.c_str() + 1, NULL, 0, static_cast<fuse_fill_dir_flags>(0));
+        // }
 
         for (const auto& file : files) {
             if (file.find(path_str) == 0 && file.substr(path_str.length()).find('/') == std::string::npos) {
@@ -80,14 +81,9 @@ static int my_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t
 
 static int my_open(const char *path, struct fuse_file_info *fi) {
     std::string path_str(path);
-    std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
+    MessageWithFileData* fileMeta = tg.GetFileMeta(path_str);
 
-    std::set<std::string> files;
-    for (size_t i = 0; i < filesMeta.size(); i++) {
-        files.insert(filesMeta[i].path);
-    }
-
-    if (files.find(path_str) == files.end())
+    if (fileMeta == nullptr)
         return -ENOENT;
 
     return 0;

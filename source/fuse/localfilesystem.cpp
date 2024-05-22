@@ -61,11 +61,20 @@ MessageWithFileData* LocalFileSystemWithTgAPI::GetFileMeta(std::string path) {
     auto messages = GetAllFilesMeta();
     for (size_t i = 0; i < messages.size(); i++) {
         if (messages[i].path == path) {
-            return &messages[i];
+            MessageWithFileData* tmp = new MessageWithFileData(messages[i].messageId, messages[i].fileId, messages[i].path, messages[i].date);
+            return tmp;
         }
     }
 
     return nullptr;
+}
+
+std::string getFileName(const std::string& filePath) {
+    size_t pos = filePath.find_last_of("/\\");
+    if (pos != std::string::npos) {
+        return filePath.substr(pos + 1);
+    }
+    return filePath;
 }
 
 std::string LocalFileSystemWithTgAPI::GetFileDataByAbsolutePath(std::string path) {
@@ -73,6 +82,8 @@ std::string LocalFileSystemWithTgAPI::GetFileDataByAbsolutePath(std::string path
     if (fileMeta == nullptr) {
         return "";
     }
+
+
     File::Ptr file = bot->getApi().getFile(fileMeta->fileId);
     return bot->getApi().downloadFile(file->filePath);
 }
@@ -103,14 +114,6 @@ void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
     }
 }
 
-std::string getFileName(const std::string& filePath) {
-    size_t pos = filePath.find_last_of("/\\");
-    if (pos != std::string::npos) {
-        return filePath.substr(pos + 1);
-    }
-    return filePath;
-}
-
 void LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
     std::string fileName = getFileName(path);
     std::ofstream outFile(fileName);
@@ -118,7 +121,7 @@ void LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
     outFile.close();
 
     DeleteFileByAbsolutePath(path);
-    auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile("/source/fuse/build/" + fileName, GetMimeTypeFromExtension(fileName)));
+    auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile("/" + fileName, GetMimeTypeFromExtension(fileName)));
     std::filesystem::remove(fileName);
 }
 

@@ -2,6 +2,8 @@
 #include <string>
 #include <tgbot/tgbot.h>
 
+using namespace TgBot;
+
 struct MessageWithFileData {
     MessageWithFileData(std::int32_t messageId, const std::string& fileId, const std::string& path, std::int32_t date);
     std::int32_t messageId; 

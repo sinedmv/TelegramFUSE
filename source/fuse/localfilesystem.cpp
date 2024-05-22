@@ -1,8 +1,8 @@
 #include "localfilesystem.h"
 
 #include <cstdlib>
+#include <filesystem>
 
-const std::string directoriesFile = "/source/directories.txt";
 const std::string metaFile = "/source/metaFile.txt";
 
 LocalFileSystemWithTgAPI::LocalFileSystemWithTgAPI() {
@@ -16,6 +16,7 @@ LocalFileSystemWithTgAPI::~LocalFileSystemWithTgAPI() {
 }
 
 std::vector<std::string> LocalFileSystemWithTgAPI::GetAllAvailableDirectories() {
+    std::vector<MessageWithFileData> filesMeta = GetAllFilesMeta();
     std::vector<std::string> directories;
     std::ifstream file(directoriesFile);
     
@@ -36,7 +37,6 @@ std::vector<std::string> LocalFileSystemWithTgAPI::GetAllAvailableDirectories() 
 }
 
 std::vector<MessageWithFileData> LocalFileSystemWithTgAPI::GetAllFilesMeta() {
-    void FileSystemMeta::GetAllMetaDataAboutFiles() {
     std::vector<MessageWithFileData> resultVector;
     std::ifstream file(metaFile);
 
@@ -55,7 +55,6 @@ std::vector<MessageWithFileData> LocalFileSystemWithTgAPI::GetAllFilesMeta() {
     }
 
     return resultVector;
-}
 }
 
 MessageWithFileData* LocalFileSystemWithTgAPI::GetFileMeta(std::string path) {
@@ -79,11 +78,49 @@ std::string LocalFileSystemWithTgAPI::GetFileDataByAbsolutePath(std::string path
 }
 
 void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
+    std::ifstream inputFile(metaFile);
+    std::string line;
+    std::string content;
+    bool pathExists = false;
+    while (std::getline(inputFile, line)) {
+        if (line.find(absolutePath) != std::string::npos) {
+            pathExists = true;
+            std::istringstream iss(line);
+            std::int32_t messageId_;
+            iss >> messageId_;
+            bot.getApi().deleteMessage(chatId, messageId_);
+        } else {
+            content += line + "\n";
+        }
+    }
 
+    inputFile.close();
+
+    if (pathExists) {
+        std::ofstream file(messagesBackupFile, std::ios::trunc);
+        file << content;
+        file.close();
+    }
+}
+
+std::string getFileName(const std::string& filePath) {
+    size_t pos = filePath.find_last_of("/\\");
+    if (pos != std::string::npos) {
+        return filePath.substr(pos + 1);
+    }
+    return filePath;
 }
 
 MessageWithFileData LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
+    std::string fileName = getFileName(path);
+    std::ofstream outFile(filePath);
+    outFile << content;
+    outFile.close();
 
+    DeleteFileByAbsolutePath(path);
+    auto message = bot.getApi().sendDocument(chatId, InputFile::fromFile("/source/fuse/build/" + fileName, GetMimeTypeFromExtension(fileName)));
+    std::filesystem::remove(filename);
+    return message;
 }
 
 std::string LocalFileSystemWithTgAPI::GetMimeTypeFromExtension(const std::string& filePath) {

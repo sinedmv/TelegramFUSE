@@ -81,7 +81,7 @@ bool CheckDirectoryExist(const std::string& directory) {
 }
 
 std::string FileSystemMeta::GetAbsolutePath(Message::Ptr& message) {
-    std::string absolutePath = "";
+    std::string absolutePath = "/";
     std::regex pattern("#.*");
     std::string directory = GetDirectory(message->caption);
     if (directory.length() != 0) {

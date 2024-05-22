@@ -15,25 +15,24 @@ LocalFileSystemWithTgAPI::~LocalFileSystemWithTgAPI() {
     system(command.c_str());
 }
 
-std::vector<std::string> LocalFileSystemWithTgAPI::GetAllAvailableDirectories() {
-    std::vector<MessageWithFileData> filesMeta = GetAllFilesMeta();
-    std::vector<std::string> directories;
-    std::ifstream file(directoriesFile);
-    
-    if (!file.is_open()) {
-        std::cerr << "Failed to open file: " << directoriesFile << std::endl;
-        return directories;
-    }
-    
-    std::string line;
-    while (std::getline(file, line)) {
-        if (!line.empty()) {
-            directories.push_back(line);
+std::vector<std::string> ExtractFirstDirectories(const std::vector<MessageWithFileData>& filesMeta) {
+    std::set<std::string> firstDirectoriesSet;
+
+    for (const auto& meta : filesMeta) {
+        std::size_t startPos = meta->path.find_first_not_of('/');
+        std::size_t endPos = meta->path.find('/', startPos);
+        if (startPos != std::string::npos && endPos != std::string::npos) {
+            firstDirectoriesSet.insert(path.substr(startPos, endPos - startPos));
         }
     }
-    
-    file.close();
-    return directories;
+
+    std::vector<std::string> firstDirectories(firstDirectoriesSet.begin(), firstDirectoriesSet.end());
+    return firstDirectories;
+}
+
+std::vector<std::string> LocalFileSystemWithTgAPI::GetAllAvailableDirectories() {
+    std::vector<MessageWithFileData> filesMeta = GetAllFilesMeta();
+    return ExtractFirstDirectories(filesMeta);
 }
 
 std::vector<MessageWithFileData> LocalFileSystemWithTgAPI::GetAllFilesMeta() {

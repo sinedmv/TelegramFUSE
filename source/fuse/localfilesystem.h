@@ -22,7 +22,7 @@ public:
     MessageWithFileData* GetFileMeta(std::string path); // Will return nullptr if file doesn't exist
     std::string GetFileDataByAbsolutePath(std::string path); // Will return a file data in string-type
     void DeleteFileByAbsolutePath(std::string path); // Will delete all occurrences about this file in Telegram and in meta-files
-    MessageWithFileData SendFile(std::string path, std::string content); // Firstly, will delete file from the chat. And after this will send the file
+    void SendFile(std::string path, std::string content); // Firstly, will delete file from the chat. And after this will send the file
 private:
     Bot& bot;
     std::string chatId;

@@ -22,7 +22,7 @@ std::vector<std::string> ExtractFirstDirectories(const std::vector<MessageWithFi
         std::size_t startPos = meta->path.find_first_not_of('/');
         std::size_t endPos = meta->path.find('/', startPos);
         if (startPos != std::string::npos && endPos != std::string::npos) {
-            firstDirectoriesSet.insert(path.substr(startPos, endPos - startPos));
+            firstDirectoriesSet.insert(meta->path.substr(startPos, endPos - startPos));
         }
     }
 
@@ -82,7 +82,7 @@ void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
     std::string content;
     bool pathExists = false;
     while (std::getline(inputFile, line)) {
-        if (line.find(absolutePath) != std::string::npos) {
+        if (line.find(path) != std::string::npos) {
             pathExists = true;
             std::istringstream iss(line);
             std::int32_t messageId_;
@@ -96,7 +96,7 @@ void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
     inputFile.close();
 
     if (pathExists) {
-        std::ofstream file(messagesBackupFile, std::ios::trunc);
+        std::ofstream file(metaFile, std::ios::trunc);
         file << content;
         file.close();
     }
@@ -110,16 +110,15 @@ std::string getFileName(const std::string& filePath) {
     return filePath;
 }
 
-MessageWithFileData LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
+void LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
     std::string fileName = getFileName(path);
-    std::ofstream outFile(filePath);
+    std::ofstream outFile(fileName);
     outFile << content;
     outFile.close();
 
     DeleteFileByAbsolutePath(path);
-    auto message = bot.getApi().sendDocument(chatId, InputFile::fromFile("/source/fuse/build/" + fileName, GetMimeTypeFromExtension(fileName)));
+    bot.getApi().sendDocument(chatId, InputFile::fromFile("/source/fuse/build/" + fileName, GetMimeTypeFromExtension(fileName)));
     std::filesystem::remove(filename);
-    return message;
 }
 
 std::string LocalFileSystemWithTgAPI::GetMimeTypeFromExtension(const std::string& filePath) {

@@ -11,7 +11,7 @@ include(ExternalProject)
 find_package(PkgConfig REQUIRED)
 pkg_search_module(FUSE REQUIRED IMPORTED_TARGET fuse3)
 
-add_executable(main main.cpp)
+add_executable(main main.cpp localfilesystem.h localfilesystem.cpp)
 
 target_link_libraries(main PkgConfig::FUSE)
 set_property(TARGET main PROPERTY CXX_STANDARD 17)

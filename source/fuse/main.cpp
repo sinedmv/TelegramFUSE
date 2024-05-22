@@ -7,26 +7,10 @@
 #include <vector>
 #include <string>
 #include <cstring>
+#include <algorithm>
 #include <errno.h>
-
-struct MessageWithFileData {
-    MessageWithFileData(std::int32_t messageId, const std::string& fileId, const std::string& path, std::int32_t date);
-    std::int32_t messageId; 
-    std::string fileId; // FileId in Telegram
-    std::string path;
-    std::int32_t date; // UNIX-time
-    // We need to use this attribute to the "ctime" and "mtime" commands
-};
-
-class LocalFileSystemWithTgAPI {
-public:
-    std::vector<std::string> GetAllAvailableDirectories();
-    std::vector<MessageWithFileData> GetAllFilesMeta();
-    MessageWithFileData* GetFileMeta(std::string path);
-    std::string GetFileDataByAbsolutePath(std::string path); // Will return a file data in string-type or nullptr if file doesn't exist
-    void DeleteFileByAbsolutePath(std::string path); // Will delete all occurrences about this file in Telegram and in meta-files
-    MessageWithFileData SendFile(std::string path, std::string content); // Firstly, will delete file from the chat. And after this will send the file
-}
+#include <set>
+#include "localfilesystem.h"
 
 LocalFileSystemWithTgAPI tg;
 
@@ -39,7 +23,7 @@ static int my_getattr(const char *path, struct stat *stbuf, struct fuse_file_inf
     if (path_str == "/") {
         stbuf->st_mode = S_IFDIR | 0755;
         stbuf->st_nlink = 2;
-    } else if (tags.find(path_str) != tags.end()) {
+    } else if (std::find(tags.begin(), tags.end(), path_str) != tags.end()) {
         stbuf->st_mode = S_IFDIR | 0755;
         stbuf->st_nlink = 2;
     } else if (fileMeta != nullptr) {
@@ -64,7 +48,7 @@ static int my_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t
     std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
     std::set<std::string> files;
-    for (int i = 0; i < filesMeta.size(); i++) {
+    for (size_t i = 0; i < filesMeta.size(); i++) {
         files.insert(filesMeta[i].path);
     }
 
@@ -79,8 +63,8 @@ static int my_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t
         }
 
         for (const auto& file : files) {
-            if (file.find(path_str) == 0 && file.substr(path_str.length() + 1).find('/') == std::string::npos) {
-                filler(buf, file.substr(path_str.length() + 1).c_str(), NULL, 0, static_cast<fuse_fill_dir_flags>(0));
+            if (file.find(path_str) == 0 && file.substr(path_str.length()).find('/') == std::string::npos) {
+                filler(buf, file.substr(path_str.length()).c_str(), NULL, 0, static_cast<fuse_fill_dir_flags>(0));
             }
         }
     } else {
@@ -99,7 +83,7 @@ static int my_open(const char *path, struct fuse_file_info *fi) {
     std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
     std::set<std::string> files;
-    for (int i = 0; i < filesMeta.size(); i++) {
+    for (size_t i = 0; i < filesMeta.size(); i++) {
         files.insert(filesMeta[i].path);
     }
 
@@ -113,7 +97,7 @@ static int my_read(const char *path, char *buf, size_t size, off_t offset, struc
     std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
     std::set<std::string> files;
-    for (int i = 0; i < filesMeta.size(); i++) {
+    for (size_t i = 0; i < filesMeta.size(); i++) {
         files.insert(filesMeta[i].path);
     }
 
@@ -137,7 +121,7 @@ static int my_create(const char *path, mode_t mode, struct fuse_file_info *fi) {
     std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
     std::set<std::string> files;
-    for (int i = 0; i < filesMeta.size(); i++) {
+    for (size_t i = 0; i < filesMeta.size(); i++) {
         files.insert(filesMeta[i].path);
     }
 
@@ -153,7 +137,7 @@ static int my_write(const char *path, const char *buf, size_t size, off_t offset
     std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
     std::set<std::string> files;
-    for (int i = 0; i < filesMeta.size(); i++) {
+    for (size_t i = 0; i < filesMeta.size(); i++) {
         files.insert(filesMeta[i].path);
     }
 
@@ -171,10 +155,11 @@ static int my_write(const char *path, const char *buf, size_t size, off_t offset
 }
 
 static int my_unlink(const char* path) {
+    std::string path_str(path);
     std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
     std::set<std::string> files;
-    for (int i = 0; i < filesMeta.size(); i++) {
+    for (size_t i = 0; i < filesMeta.size(); i++) {
         files.insert(filesMeta[i].path);
     }
     if (files.find(path_str) == files.end()) {
@@ -186,11 +171,12 @@ static int my_unlink(const char* path) {
 }
 
 static int my_rmdir(const char* path) {
+    std::string path_str(path);
     std::vector<std::string> tags = tg.GetAllAvailableDirectories();
     std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
     std::set<std::string> files;
-    for (int i = 0; i < filesMeta.size(); i++) {
+    for (size_t i = 0; i < filesMeta.size(); i++) {
         files.insert(filesMeta[i].path);
     }
 
@@ -198,7 +184,7 @@ static int my_rmdir(const char* path) {
         return -ENOTDIR;
     
     for (const auto& file : files) {
-        folder = file.substr(0, path_str.length() + 1);
+        std::string folder = file.substr(0, path_str.length() + 1);
         if (folder == path_str) {
             tg.DeleteFileByAbsolutePath(path_str);
         }

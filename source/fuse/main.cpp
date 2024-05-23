@@ -114,17 +114,17 @@ static int my_read(const char *path, char *buf, size_t size, off_t offset, struc
 
 static int my_create(const char *path, mode_t mode, struct fuse_file_info *fi) {
     std::string path_str(path);
-    std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
+    // std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
-    std::set<std::string> files;
-    for (size_t i = 0; i < filesMeta.size(); i++) {
-        files.insert(filesMeta[i].path);
-    }
+    // std::set<std::string> files;
+    // for (size_t i = 0; i < filesMeta.size(); i++) {
+    //     files.insert(filesMeta[i].path);
+    // }
 
-    if (files.find(path_str) != files.end())
-        return 0;
+    // if (files.find(path_str) != files.end())
+    //     return 0;
 
-    tg.SendFile(path_str, "");
+    tg.SendFile(path_str, "empty file");
     return 0;
 }
 

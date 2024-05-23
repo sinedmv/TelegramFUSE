@@ -25,6 +25,6 @@ public:
     void SendFile(std::string path, std::string content); // Firstly, will delete file from the chat. And after this will send the file
 private:
     Bot* bot;
-    std::string chatId;
+    std::int64_t chatId;
     std::string GetMimeTypeFromExtension(const std::string& filePath);
 };

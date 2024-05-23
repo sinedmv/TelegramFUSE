@@ -120,8 +120,13 @@ void LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
     outFile << content;
     outFile.close();
 
-    DeleteFileByAbsolutePath(path);
-    auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile("/" + fileName, GetMimeTypeFromExtension(fileName)));
+    //DeleteFileByAbsolutePath(path);
+    try {
+        auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile(path, GetMimeTypeFromExtension(fileName)));
+    } catch(std::exception e) {
+
+    }
+
     std::filesystem::remove(fileName);
 }
 

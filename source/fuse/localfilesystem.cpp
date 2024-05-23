@@ -111,14 +111,20 @@ void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
     std::string content;
     bool pathExists = false;
     while (std::getline(inputFile, line)) {
-        if (line.find(path) != std::string::npos) {
-            pathExists = true;
-            std::istringstream iss(line);
-            std::int32_t messageId_;
-            iss >> messageId_;
-            bot->getApi().deleteMessage(chatId, messageId_);
+        std::istringstream iss(line);
+        std::int32_t messageId_;
+        std::string fileId;
+        std::string path_;
+        std::int32_t date;
+        if (iss >> messageId_ >> fileId >> path_ >> date) {
+            if (path_ == path) {
+                pathExists = true;
+                bot->getApi().deleteMessage(chatId, messageId_);
+            } else {
+                content += line + "\n";
+            }
         } else {
-            content += line + "\n";
+            std::cerr << "Error parsing line: " << line << std::endl;
         }
     }
 
@@ -141,21 +147,14 @@ void LocalFileSystemWithTgAPI::SaveFileInMeta(std::int32_t messageId, std::strin
 
 void LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
     std::string fileName = getFileName(path);
-    std::ofstream outFile(fileName);
+    std::ofstream outFile(fileName, std::ios::trunc);
     outFile << content;
     outFile.close();
 
     DeleteFileByAbsolutePath(path);
-    try {
-        auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile(fileName, GetMimeTypeFromExtension(fileName)), "", ExtractDirectory(path));
-        File::Ptr file = bot->getApi().getFile(message->document->fileId);
-        SaveFileInMeta(message->messageId, file->fileId, path, message->date);
-    } catch (TgException te) {
-
-    }
-    catch(std::exception e) {
-        
-    }
+    auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile(fileName, GetMimeTypeFromExtension(fileName)), "", ExtractDirectory(path));
+    File::Ptr file = bot->getApi().getFile(message->document->fileId);
+    SaveFileInMeta(message->messageId, file->fileId, path, message->date);
 
     std::filesystem::remove(fileName);
 }

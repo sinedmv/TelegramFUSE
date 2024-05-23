@@ -23,7 +23,7 @@ public:
     std::string GetFileDataByAbsolutePath(std::string path); // Will return a file data in string-type
     void DeleteFileByAbsolutePath(std::string path); // Will delete all occurrences about this file in Telegram and in meta-files
     void SendFile(std::string path, std::string content); // Firstly, will delete file from the chat. And after this will send the file
-    void SaveFileInMeta(std::int32_t messageId, string& fileId, string& absolutePath, std::int32_t date);
+    void SaveFileInMeta(std::int32_t messageId, std::string& fileId, std::string& absolutePath, std::int32_t date);
 private:
     Bot* bot;
     std::int64_t chatId;

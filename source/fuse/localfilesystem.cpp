@@ -5,6 +5,7 @@
 #include <set>
 
 const std::string metaFile = "/source/metaFile.txt";
+const std::string metaFolder = "/source/metaFolder.txt";
 
 LocalFileSystemWithTgAPI::LocalFileSystemWithTgAPI() {
     bot = new Bot("7001811625:AAEg0fFOYm-yJ0ld9CKYEFT-E9xUQyF9lfs");
@@ -20,7 +21,7 @@ std::string ExtractDirectory(const std::string& path) {
     std::size_t startPos = path.find_first_not_of('/');
     std::size_t endPos = path.find('/', startPos);
     if (startPos != std::string::npos && endPos != std::string::npos) {
-        return path.substr(startPos, endPos - startPos);
+        return "#" + path.substr(startPos, endPos - startPos);
     }
     return "";
 }
@@ -41,8 +42,15 @@ std::vector<std::string> ExtractFirstDirectories(const std::vector<MessageWithFi
 }
 
 std::vector<std::string> LocalFileSystemWithTgAPI::GetAllAvailableDirectories() {
-    std::vector<MessageWithFileData> filesMeta = GetAllFilesMeta();
-    return ExtractFirstDirectories(filesMeta);
+    std::vector<std::string> tags;
+    std::ifstream file(metaFolder);
+
+    std::string line;
+    while (std::getline(file, line)) {
+        tags.push_back(line);
+    }
+
+    return tags;
 }
 
 std::vector<MessageWithFileData> LocalFileSystemWithTgAPI::GetAllFilesMeta() {
@@ -123,7 +131,7 @@ void LocalFileSystemWithTgAPI::DeleteFileByAbsolutePath(std::string path) {
     }
 }
 
-void LocalFileSystemWithTgAPI::SaveFileInMeta(std::int32_t messageId, string& fileId, string& absolutePath, std::int32_t date) {
+void LocalFileSystemWithTgAPI::SaveFileInMeta(std::int32_t messageId, std::string& fileId, std::string& absolutePath, std::int32_t date) {
     DeleteFileByAbsolutePath(absolutePath);
 
     std::ofstream file(metaFile, std::ios::app);
@@ -139,11 +147,14 @@ void LocalFileSystemWithTgAPI::SendFile(std::string path, std::string content) {
 
     DeleteFileByAbsolutePath(path);
     try {
-        auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile(path, GetMimeTypeFromExtension(fileName)));
+        auto message = bot->getApi().sendDocument(chatId, InputFile::fromFile(fileName, GetMimeTypeFromExtension(fileName)), "", ExtractDirectory(path));
         File::Ptr file = bot->getApi().getFile(message->document->fileId);
-        SaveFileInMeta(message->messageId, file->fileId, path, message->date)ж
-    } catch(std::exception e) {
+        SaveFileInMeta(message->messageId, file->fileId, path, message->date);
+    } catch (TgException te) {
 
+    }
+    catch(std::exception e) {
+        
     }
 
     std::filesystem::remove(fileName);

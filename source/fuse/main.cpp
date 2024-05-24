@@ -26,17 +26,17 @@ static int my_getattr(const char *path, struct stat *stbuf, struct fuse_file_inf
 
         if (path_str == "/")
         {
-            stbuf->st_mode = S_IFDIR | 0755;
+            stbuf->st_mode = S_IFDIR | 0777;
             stbuf->st_nlink = 2;
         }
         else if (std::find(tags.begin(), tags.end(), path_str) != tags.end())
         {
-            stbuf->st_mode = S_IFDIR | 0755;
+            stbuf->st_mode = S_IFDIR | 0777;
             stbuf->st_nlink = 2;
         }
         else if (fileMeta != nullptr)
         {
-            stbuf->st_mode = S_IFREG | 0444;
+            stbuf->st_mode = S_IFREG | 0777;
             stbuf->st_nlink = 1;
             stbuf->st_size = tg.GetFileDataByAbsolutePath(path_str).size();
             stbuf->st_mtime = (time_t)fileMeta->date;
@@ -58,10 +58,6 @@ static int my_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t
 {
     try
     {
-        (void)offset;
-        (void)fi;
-        (void)flags;
-
         std::vector<std::string> tags = tg.GetAllAvailableDirectories();
         std::vector<MessageWithFileData> filesMeta = tg.GetAllFilesMeta();
 
